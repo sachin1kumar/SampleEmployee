@@ -3,7 +3,7 @@ package com.manager.sampleemployee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.jetbrains.handson.mpp.mobile.createApplicationScreenMessage
+import com.sampleemployee.createApplicationScreenMessage
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

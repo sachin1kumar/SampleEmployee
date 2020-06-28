@@ -5,7 +5,7 @@
     <key>CFBundleExecutable</key>
     <string>SharedCode</string>
     <key>CFBundleIdentifier</key>
-    <string>com.jetbrains.handson.mpp.mobile.SharedCode</string>
+    <string>com.sampleemployee.SharedCode</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
