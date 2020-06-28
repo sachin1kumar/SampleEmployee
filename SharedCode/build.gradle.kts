@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.3.70"
 }
 
 kotlin {
@@ -24,10 +25,30 @@ kotlin {
 
     sourceSets["commonMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.1.1")
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.20.0")
+        implementation ("io.ktor:ktor-client-core:1.1.2")
+        //
+        //implementation ("com.squareup.retrofit2:retrofit:2.7.1")
+        //implementation ("com.squareup.retrofit2:converter-gson:2.7.1")
+        //implementation ("android.arch.lifecycle:extensions:1.1.1")
+        //implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
     }
 
     sourceSets["androidMain"].dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib")
+        //
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1")
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1")
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+        implementation ("io.ktor:ktor-client-android:1.1.1")
+    }
+
+    sourceSets["iosMain"].dependencies {
+        implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:1.1.1")
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.20.0")
+        implementation ("io.ktor:ktor-client-ios:1.1.2")
     }
 }
 
